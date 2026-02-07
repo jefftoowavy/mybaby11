@@ -1,0 +1,16 @@
+<div class="proposal-container">
+  <button class="back-btn" routerLink="/dashboard">← Back</button>
+
+  <div class="letter-content">
+    <div class="letter-box">
+      <div class="message-wrapper">
+        <p class="typewriter-text">{{ displayText }}<span class="cursor" *ngIf="!showButtons">|</span></p>
+      </div>
+
+      <div class="buttons-wrapper" *ngIf="showButtons">
+        <button class="yes-btn" (click)="onYes()">YES! ❤️</button>
+        <button class="no-btn" (mouseover)="moveButton($event)" (touchstart)="moveButton($event)">No</button>
+      </div>
+    </div>
+  </div>
+</div>

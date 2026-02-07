@@ -1,0 +1,35 @@
+<div class="login-container">
+  <div class="glassmorphism-box">
+    <div class="content">
+      <h1 class="title">JD's Princess</h1>
+
+      <form (ngSubmit)="onLogin()" class="form">
+        <div class="input-group">
+          <input
+            type="text"
+            placeholder="Username"
+            [(ngModel)]="username"
+            name="username"
+            required
+            class="input-field"
+          />
+        </div>
+
+        <div class="input-group">
+          <input
+            type="password"
+            placeholder="Password"
+            [(ngModel)]="password"
+            name="password"
+            required
+            class="input-field"
+          />
+        </div>
+
+        <button type="submit" class="login-btn">Enter</button>
+      </form>
+
+      <div class="error-message" *ngIf="errorMessage">{{ errorMessage }}</div>
+    </div>
+  </div>
+</div>

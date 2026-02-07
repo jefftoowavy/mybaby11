@@ -1,0 +1,29 @@
+<div class="gallery-container">
+  <div class="gallery-header">
+    <h1 class="gallery-title">Our Memories</h1>
+    <button class="back-btn" routerLink="/dashboard">← Back</button>
+  </div>
+
+  <div class="gallery-grid">
+    <div *ngFor="let item of mediaItems" class="gallery-item">
+      <div class="image-wrapper">
+        <ng-container *ngIf="item.type === 'image'">
+          <img [src]="item.src" [alt]="item.title" class="gallery-image" loading="lazy" />
+        </ng-container>
+        <ng-container *ngIf="item.type === 'video'">
+          <video [src]="item.src" class="gallery-image" controls controlsList="nodownload"></video>
+          <div class="play-button">
+            <span>▶</span>
+          </div>
+        </ng-container>
+        <div class="overlay">
+          <p class="overlay-text">{{ item.title }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="no-images" *ngIf="mediaItems.length === 0">
+    <p>📸 Add photos to your memories! Place images in assets/tadiwa/ folder</p>
+  </div>
+</div>
