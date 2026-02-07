@@ -15,6 +15,28 @@ body {
   background: #fafafa;
   color: #2d0a0a;
   overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Mobile touch optimizations */
+input,
+button,
+a {
+  -webkit-tap-highlight-color: transparent;
+}
+
+button,
+a {
+  min-height: 44px;
+  min-width: 44px;
+}
+
+/* Improved mobile viewport */
+@media (max-width: 768px) {
+  html {
+    font-size: 14px;
+  }
 }
 
 h1,

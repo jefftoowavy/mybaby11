@@ -107,27 +107,75 @@
   box-shadow: 0 10px 30px rgba(255, 255, 255, 0.2);
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
   .landing-content {
     flex-direction: column;
-    gap: 40px;
+    gap: 50px;
   }
 
   .landing-image {
-    width: 280px;
-    height: 280px;
+    width: 320px;
+    height: 320px;
   }
 
   .landing-title {
-    font-size: 44px;
+    font-size: 52px;
+  }
+}
+
+@media (max-width: 768px) {
+  .landing-container {
+    padding: 20px;
+  }
+
+  .landing-content {
+    flex-direction: column;
+    gap: 40px;
+    padding: 20px;
+  }
+
+  .landing-image {
+    width: 250px;
+    height: 250px;
+    border-radius: 15px;
+  }
+
+  .landing-title {
+    font-size: 36px;
+    margin-bottom: 10px;
   }
 
   .landing-subtitle {
-    font-size: 16px;
+    font-size: 14px;
+    margin-bottom: 30px;
   }
 
   .cta-button {
-    padding: 14px 40px;
-    font-size: 18px;
+    padding: 14px 36px;
+    font-size: 16px;
+    min-height: 48px;
+    width: 100%;
+    max-width: 250px;
+  }
+}
+
+@media (max-width: 480px) {
+  .landing-image {
+    width: 200px;
+    height: 200px;
+    border-radius: 12px;
+  }
+
+  .landing-title {
+    font-size: 28px;
+  }
+
+  .landing-subtitle {
+    font-size: 12px;
+  }
+
+  .cta-button {
+    padding: 12px 30px;
+    font-size: 14px;
   }
 }

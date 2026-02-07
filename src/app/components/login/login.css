@@ -42,8 +42,25 @@
   padding: 60px 40px;
   width: 100%;
   max-width: 400px;
+  margin: 20px;
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
   animation: slideUp 0.8s ease-out;
+}
+
+@media (max-width: 768px) {
+  .glassmorphism-box {
+    padding: 40px 25px;
+    margin: 20px;
+    border-radius: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .glassmorphism-box {
+    padding: 30px 20px;
+    margin: 15px;
+    max-width: 100%;
+  }
 }
 
 @keyframes slideUp {
@@ -69,6 +86,13 @@
   text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
+@media (max-width: 480px) {
+  .title {
+    font-size: 28px;
+    margin-bottom: 30px;
+  }
+}
+
 .form {
   display: flex;
   flex-direction: column;
@@ -87,11 +111,19 @@
   background: rgba(255, 255, 255, 0.1);
   color: #2d0a0a;
   font-family: 'Inter', sans-serif;
-  font-size: 14px;
+  font-size: 16px;
   outline: none;
   transition: all 0.3s ease;
   backdrop-filter: blur(10px);
   box-sizing: border-box;
+  min-height: 48px;
+}
+
+@media (max-width: 480px) {
+  .input-field {
+    font-size: 16px;
+    padding: 12px 14px;
+  }
 }
 
 .input-field::placeholder {
@@ -117,6 +149,15 @@
   transition: all 0.3s ease;
   margin-top: 20px;
   box-shadow: 0 4px 15px rgba(45, 10, 10, 0.3);
+  min-height: 48px;
+  width: 100%;
+}
+
+@media (max-width: 480px) {
+  .login-btn {
+    font-size: 16px;
+    padding: 12px 24px;
+  }
 }
 
 .login-btn:hover {

@@ -4,6 +4,18 @@
   padding: 60px 20px;
 }
 
+@media (max-width: 768px) {
+  .gallery-container {
+    padding: 40px 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .gallery-container {
+    padding: 30px 12px;
+  }
+}
+
 .gallery-header {
   max-width: 1400px;
   margin: 0 auto 60px;
@@ -17,6 +29,18 @@
   font-size: 48px;
   color: #2d0a0a;
   margin: 0;
+}
+
+@media (max-width: 768px) {
+  .gallery-title {
+    font-size: 36px;
+  }
+}
+
+@media (max-width: 480px) {
+  .gallery-title {
+    font-size: 28px;
+  }
 }
 
 .back-btn {
@@ -33,6 +57,17 @@
   text-decoration: none;
   text-transform: uppercase;
   letter-spacing: 0.5px;
+  min-height: 44px;
+  min-width: 44px;
+  display: flex;
+  align-items: center;
+}
+
+@media (max-width: 480px) {
+  .back-btn {
+    padding: 8px 16px;
+    font-size: 12px;
+  }
 }
 
 .back-btn:hover {
@@ -47,7 +82,21 @@
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
   gap: 25px;
-  padding: 0 20px;
+  padding: 0;
+}
+
+@media (max-width: 768px) {
+  .gallery-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .gallery-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
 }
 
 .gallery-item {
@@ -100,19 +149,32 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 80px;
-  height: 80px;
+  width: 70px;
+  height: 70px;
   background: rgba(229, 179, 168, 0.9);
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 32px;
+  font-size: 28px;
   color: #2d0a0a;
   cursor: pointer;
   transition: all 0.3s ease;
   opacity: 1;
   z-index: 5;
+  border: none;
+  min-height: 70px;
+  min-width: 70px;
+}
+
+@media (max-width: 480px) {
+  .play-button {
+    width: 60px;
+    height: 60px;
+    min-height: 60px;
+    min-width: 60px;
+    font-size: 24px;
+  }
 }
 
 .gallery-item:hover .play-button {
